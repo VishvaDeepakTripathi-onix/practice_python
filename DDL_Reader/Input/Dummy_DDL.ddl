@@ -1,0 +1,30 @@
+
+CREATE TABLE [RDS_SRCSSIMS].[MECOAUDT]
+( 
+	[DST_CNTR]           character(4)  NOT NULL ,
+	[FACILITY]           character(4)  NOT NULL ,
+	[CORP_ITEM_CD]       decimal(8,0)  NOT NULL ,
+	[AUDIT_CREATE_TS]    datetime  NOT NULL ,
+	[PATTERN_TYPE_CD]    character(2)  NOT NULL ,
+	[PATTERN_ID]         character(3)  NOT NULL ,
+	[COOL_CLASS_CD]      SMALLINT  NOT NULL ,
+	[COOL_COMMON_CD]     SMALLINT  NOT NULL ,
+	[SHORT_LIST_ID]      SMALLINT  NOT NULL ,
+	[CORP]               character(3)  NOT NULL ,
+	[DIVISION]           character(2)  NOT NULL ,
+	[DEFAULT_EFF_DT]     datetime  NOT NULL ,
+	[DEFAULT_END_DT]     datetime  NOT NULL 
+	CONSTRAINT [Default_Value_163_966490431]
+		 DEFAULT  '9999-12-31',
+	[CREATE_TS]          datetime  NOT NULL ,
+	[LAST_UPD_DT]        datetime  NOT NULL ,
+	[LAST_UPD_USER_ID]   character(8)  NOT NULL 
+	CONSTRAINT [CURRENT_SQLID_644698438]
+		 DEFAULT  CURRENT SQLID,
+	[COOL_TXT]           varchar(540)  NOT NULL 
+)
+go
+
+ALTER TABLE [RDS_SRCSSIMS].[MECOAUDT]
+	ADD CONSTRAINT [MECOAUDTX1] PRIMARY KEY  CLUSTERED ([DST_CNTR] ASC,[FACILITY] ASC,[CORP_ITEM_CD] ASC,[AUDIT_CREATE_TS] ASC)
+go
