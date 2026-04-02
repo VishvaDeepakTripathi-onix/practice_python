@@ -1,0 +1,60 @@
+
+# 2. Integer Types:
+  # SQL Server INT maps to BigQuery INT64
+  # SQL Server TINYINT maps to BigQuery INT64
+  # SQL Server SMALLINT maps to BigQuery INT64
+  # SQL Server BIGINT maps to BigQuery INT64
+# 3. Floating-Point Types:
+    # SQL Server FLOAT maps to BigQuery FLOAT64
+    # SQL Server REAL maps to BigQuery FLOAT64
+    # SQL Server DECIMAL maps to BigQuery NUMERIC
+# 4. String Types:
+    # SQL Server VARCHAR maps to BigQuery STRING
+    # SQL Server CHAR maps to BigQuery STRING
+    # SQL Server TEXT maps to BigQuery STRING
+# 5. Date and Time Types:
+    # SQL Server DATE maps to BigQuery DATE
+    # SQL Server TIME maps to BigQuery TIME
+    # SQL Server DATETIME maps to BigQuery DATETIME
+# 6. Boolean Type:
+	# SQL Server BIT maps to BigQuery BOOL
+# 7. Binary Types:
+	# SQL Server BINARY maps to BigQuery BYTES
+	# SQL Server VARBINARY maps to BigQuery BYTES
+# 8. Guid/UUID Type:
+  # SQL Server UNIQUEIDENTIFIER maps to BigQuery STRING
+# 9. JSON Type:
+	# SQL Server JSON maps to BigQuery STRING
+# 10. Geospatial Types:
+  # SQL Server geospatial types (e.g., GEOMETRY, GEOGRAPHY) do not have direct equivalents in BigQuery. You may need to store geospatial data as strings or use other appropriate data structures based on your use case.
+
+int,	int64
+bigint,	int64
+binary,	bytes
+bit,	bool
+char/Character(10),	string
+nvarchar,	string
+varchar(10),	string
+text,	string
+xml,	string
+
+date,	date
+datetime,	datetime
+datetime2,	datetime
+decimal(1,1),	numeric
+decimal(10,10),	bignumeric
+float,	float64
+int,	int64
+money,	numeric
+nchar,	string
+ntext,	string
+numeric(1,1),	numeric
+numeric(10,10),	bignumeric
+
+real,	float64
+smalldatetime,	datetime
+smallint,	int64
+smallmoney,	numeric
+
+time,	time
+timestamp,	timestamp
