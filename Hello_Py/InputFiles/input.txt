@@ -1,0 +1,3 @@
+This is the testing files that need to be part of the POC of reading files.
+Again we are not gonig to change anything.
+Idea is to read files lines by lines and then replace few of the character with pre-specified.
